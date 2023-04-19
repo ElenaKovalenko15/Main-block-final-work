@@ -12,11 +12,18 @@ Console.Clear();
 Console.WriteLine("Введите количество элементов массива: ");
 int m = Convert.ToInt32(Console.ReadLine());
 string[] arrayLine = new string[m];
+string[] arrayLineResult = new string[m];
+
 FillArray(arrayLine);
+Console.WriteLine();
 Console.WriteLine($"Получили исходный массив: ");
 PrintArray(arrayLine);
 
+Elementscuter(arrayLine, arrayLineResult);
 
+Console.WriteLine();
+Console.WriteLine($"Получили новый массив с элементами, длина которых меньше, либо равна 3 символам: ");
+PrintArray(arrayLineResult);
 
 void FillArray(string[] array)
 {
@@ -36,4 +43,17 @@ void PrintArray(string[] inArray)
         Console.Write($"{inArray[i]} ");
     }
     Console.WriteLine("]");
+}
+
+void Elementscuter(string[] arr1, string[] arr2)
+{
+    int count = 0;
+    for (int i = 0; i < arr1.GetLength(0); i++)
+    {
+        if (arr1[i].Length <= 3)
+        {
+            arr2[count] = arr1[i];
+            count++;
+        }
+    }
 }
