@@ -19,7 +19,7 @@ Console.WriteLine();
 Console.WriteLine($"Получили исходный массив: ");
 PrintArray(arrayLine);
 
-Elementscuter(arrayLine, arrayLineResult);
+ElementsCuter(arrayLine, arrayLineResult);
 
 Console.WriteLine();
 Console.WriteLine($"Получили новый массив с элементами, длина которых меньше, либо равна 3 символам: ");
@@ -45,7 +45,7 @@ void PrintArray(string[] inArray)
     Console.WriteLine("]");
 }
 
-void Elementscuter(string[] arr1, string[] arr2)
+void ElementsCuter(string[] arr1, string[] arr2)
 {
     int count = 0;
     for (int i = 0; i < arr1.GetLength(0); i++)
